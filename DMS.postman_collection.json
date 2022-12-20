@@ -1,0 +1,646 @@
+{
+	"info": {
+		"_postman_id": "4849ee5d-6e07-4d63-b20b-0a3d48fe9877",
+		"name": "DMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateAdmin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emailId\":\"yuvraj.kiraula@impetus.com\",\r\n    \"firstName\":\"Yuvraj\",\r\n    \"contactDetails\":\"+917354335370\",\r\n    \"lastName\":\"Kiraula\",\r\n    \"password\":\"Yuvraj\",\r\n    \"address\":\"35-A Akshat Nagar, Dewas\",\r\n    \"pincode\":\"455001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/admin/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateRetailer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emailId\":\"ashi@google.com\",\r\n    \"firstName\":\"Ashi\",\r\n    \"contactDetails\":\"7354335370\",\r\n    \"lastName\":\"Jain\",\r\n    \"password\":\"ashi\",\r\n    \"address\":\"Bhopal\",\r\n    \"pincode\":\"455001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/retailer/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"retailer",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateDistributor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5dXZyYWoua2lyYXVsYUBpbXBldHVzLmNvbSIsImV4cCI6MTY0ODEzNDkwNywiaWF0IjoxNjQ4MDk4OTA3fQ.12-rR237xJgWxKWVCH8DqtWlTaQcmdUuOyfnjuMBTtk",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emailId\":\"yuvrajsinghk2001@gmail.com\",\r\n    \"firstName\":\"Yuvraj\",\r\n    \"contactDetails\":\"7354335370\",\r\n    \"lastName\":\"Kiraula\",\r\n    \"password\":\"Yuvraj\",\r\n    \"address\":\"35-A Akshat Nagar, Dewas\",\r\n    \"pincode\":\"455001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/admin/create-distributor",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"create-distributor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GenerateToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emailId\":\"yuvrajsinghk2001@gmail.com\",\r\n    \"password\": \"Yuvraj\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/generate-token",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"generate-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddProduct",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5dXZyYWpzaW5naGsyMDAxQGdtYWlsLmNvbSIsImV4cCI6MTY0ODQ5MjM0MSwiaWF0IjoxNjQ4NDU2MzQxfQ.GGtUwGXsyUAQApsKI-239w8nyQ3REq4sKCzQ7ESQias",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productName\":\"SimCard\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/products/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateProductCategory",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5dXZyYWpzaW5naGsyMDAxQGdtYWlsLmNvbSIsImV4cCI6MTY0ODEzNTA5OSwiaWF0IjoxNjQ4MDk5MDk5fQ.miDbC4MohRCpUEY9MbgtTV_fFOsxSc9Tae15qI1xlno",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"categoryName\":\"Jio\",\r\n    \"price\":26,\r\n    \"products\":{\r\n        \"productId\":21\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/category/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"category",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PlaceOrder",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5dXZyYWpzaW5naGsyMDAxQGdtYWlsLmNvbSIsImV4cCI6MTY0Nzk5NDk2MSwiaWF0IjoxNjQ3OTU4OTYxfQ.mWP1d46LdkKrNmbioOPO1wRbgeV81BsRP-fxFKA5NUA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderStatus\":\"ORDER_PLACED\",\r\n    \"totalAmount\":1600,\r\n    \"quantity\":100,\r\n    \"productCategories\":{\r\n        \"categoryId\": 12,\r\n        \"categoryName\": \"BSNL\",\r\n        \"availableQuantity\": 210,\r\n        \"price\": 40,\r\n        \"product\": {\r\n            \"productId\":9,\r\n            \"productName\":\"SimCard\"\r\n        }\r\n    },\r\n    \"user\":{\r\n        \"userId\": 2,\r\n        \"emailId\":\"ashi@google.com\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/order/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"order",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddAvailableStock",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5dXZyYWpzaW5naGsyMDAxQGdtYWlsLmNvbSIsImV4cCI6MTY0ODEzNTA5OSwiaWF0IjoxNjQ4MDk5MDk5fQ.miDbC4MohRCpUEY9MbgtTV_fFOsxSc9Tae15qI1xlno",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"availableQuantity\":1000,\r\n    \"productCategories\":{\r\n        \"categoryId\":24,\r\n        \"categoryName\":\"Airtel\",\r\n        \"price\":30,\r\n        \"products\":{\r\n            \"productId\":21\r\n        }\r\n    },\r\n    \"user\":{\r\n        \"userId\":4\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/available-stock/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"available-stock",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrder",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhc2hpQGdvb2dsZS5jb20iLCJleHAiOjE2NDc5OTA0NTgsImlhdCI6MTY0Nzk1NDQ1OH0.0v794Rh6TqQTj8NSFA0pJkM-dAp-lTgAt33IEwhERZQ",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8081/order/23",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"order",
+						"23"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUser",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5dXZyYWoua2lyYXVsYUBpbXBldHVzLmNvbSIsImV4cCI6MTY0NzQ0Nzc0NiwiaWF0IjoxNjQ3NDExNzQ2fQ.QHG3gs0A0aLT5OAVw9PUR4PhtMDryLvCofsqhDpZSRw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8081/distributor/yuvraj.kiraula@impetus.com",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"distributor",
+						"yuvraj.kiraula@impetus.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRetailers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5dXZyYWpzaW5naGsxNjAyQGdtYWlsLmNvbSIsImV4cCI6MTY0Nzg3MTg5OCwiaWF0IjoxNjQ3ODM1ODk4fQ.LeLPfOdrmmTA4iWpNYx2PrCsasnDU1xtb_WFFNygQ1A",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8081/distributor/get-retailers/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"distributor",
+						"get-retailers",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCurrentUser",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5dXZyYWpzaW5naGsyMDAxQGdtYWlsLmNvbSIsImV4cCI6MTY0ODEzNTA5OSwiaWF0IjoxNjQ4MDk5MDk5fQ.miDbC4MohRCpUEY9MbgtTV_fFOsxSc9Tae15qI1xlno",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8081/current-user",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"current-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetDistributors",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5dXZyYWoua2lyYXVsYUBpbXBldHVzLmNvbSIsImV4cCI6MTY0Nzg3MzA1OSwiaWF0IjoxNjQ3ODM3MDU5fQ.uOoi70mlLrsEcKOpreuUYQ3pDUwqohEwa628yC3cNUA",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8081/admin/get-distributors",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"get-distributors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DisableRetailer",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5dXZyYWpzaW5naGsxNjAyQGdtYWlsLmNvbSIsImV4cCI6MTY0Nzg3MTg5OCwiaWF0IjoxNjQ3ODM1ODk4fQ.LeLPfOdrmmTA4iWpNYx2PrCsasnDU1xtb_WFFNygQ1A",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8081/admin/disable-retailer/ashi@google.com",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"disable-retailer",
+						"ashi@google.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EnableRetailer",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5dXZyYWpzaW5naGsxNjAyQGdtYWlsLmNvbSIsImV4cCI6MTY0Nzg3MTg5OCwiaWF0IjoxNjQ3ODM1ODk4fQ.LeLPfOdrmmTA4iWpNYx2PrCsasnDU1xtb_WFFNygQ1A",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8081/admin/enable-retailer/ashi@google.com",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"enable-retailer",
+						"ashi@google.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DisableDistributor",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5dXZyYWoua2lyYXVsYUBpbXBldHVzLmNvbSIsImV4cCI6MTY0NzUzMjA5MSwiaWF0IjoxNjQ3NDk2MDkxfQ.oQqWHGhRuxbcmwX2IhOvtLktynmZMVcpEHQp3A558uU",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8081/admin/disable-distributor/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"disable-distributor",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EnableDistributor",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5dXZyYWpzaW5naGsyMDAxQGdvb2dsZS5jb20iLCJleHAiOjE2NDc1MzI0MjQsImlhdCI6MTY0NzQ5NjQyNH0.038DfcnPkLF3ntlIZUuqBl1suA0OiMNzjh0t0pcks0E",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8081/admin/disable-distributor/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"disable-distributor",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllOrders",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhc2hpQGdvb2dsZS5jb20iLCJleHAiOjE2NDc3MTEzMjQsImlhdCI6MTY0NzY3NTMyNH0.1FLgWu0MTbPtjDhu4pZJ6zHHd0rm7sxk_9O3vWL7jWY",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8081/order/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"order",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrdersOfUser",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhc2hpQGdvb2dsZS5jb20iLCJleHAiOjE2NDc5OTA0NTgsImlhdCI6MTY0Nzk1NDQ1OH0.0v794Rh6TqQTj8NSFA0pJkM-dAp-lTgAt33IEwhERZQ",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8081/order/retailer/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"order",
+						"retailer",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductCategory",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5dXZyYWpzaW5naGsxNjAyQGdtYWlsLmNvbSIsImV4cCI6MTY0Nzg3MzM0NSwiaWF0IjoxNjQ3ODM3MzQ1fQ.jOJVtINQlrolepyQFLwnAbKcdvzOiPaEb1R7NYwiUow",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8081/category/product/9",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"category",
+						"product",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAvailableStock",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5dXZyYWpzaW5naGsyMDAxQGdtYWlsLmNvbSIsImV4cCI6MTY0ODA1NjQ0MywiaWF0IjoxNjQ4MDIwNDQzfQ.SyZPyL7_GLYo14UUdopjdIl4LaPy8mDoSMvxKNA92Bw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8081/available-stock/66",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"available-stock",
+						"66"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateUser",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5dXZyYWpzaW5naGsxNjAyQGdtYWlsLmNvbSIsImV4cCI6MTY0Nzg3MzM0NSwiaWF0IjoxNjQ3ODM3MzQ1fQ.jOJVtINQlrolepyQFLwnAbKcdvzOiPaEb1R7NYwiUow",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emailId\":\"yuvrajsinghk1602@gmail.com\",\r\n    \"firstName\":\"Yuvraj\",\r\n    \"contactDetails\":\"+91 7354335370\",\r\n    \"lastName\":\"Kiraula\",\r\n    \"password\":\"Yuvraj\",\r\n    \"address\":\"35-A Akshat Nagar, Dewas\",\r\n    \"pincode\":\"455011\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/distributor/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"distributor",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/retailer/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"retailer",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
