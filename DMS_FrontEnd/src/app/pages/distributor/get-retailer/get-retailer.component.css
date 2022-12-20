@@ -1,0 +1,13 @@
+.distributor-icon {
+
+    background-image: url('../../../../assets/user.png');
+
+    background-size: cover;
+
+  }
+
+  .button1 {
+    position:absolute;
+    right: 0;
+    
+  } 

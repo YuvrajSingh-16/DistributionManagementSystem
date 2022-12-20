@@ -1,0 +1,9 @@
+.user-icon {
+    background-image: url('../../../../../assets/user.png');
+    background-size: cover;
+  }
+
+  .line{
+    border-top: 1px solid;
+    padding-top: 20px;
+  }

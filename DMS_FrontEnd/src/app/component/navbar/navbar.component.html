@@ -1,0 +1,43 @@
+
+<!--<p>navbar works!</p> -->
+<!-- <a 
+    routerLink="/"
+    mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>home</mat-icon>
+  </a> -->
+
+<mat-toolbar color="primary">
+    <span>Distribution Management System</span>
+    <span class="example-spacer"></span>
+    
+    <a 
+    *ngIf="!isLoggedIn"
+    routerLink="/login"
+    mat-icon-button 
+    class="mr20 ml20" 
+    aria-label="">Login
+    </a>
+
+    <a
+    *ngIf="!isLoggedIn"
+    routerLink="/signup"
+    mat-icon-button 
+    class="mr20 ml30" 
+    aria-label="">Register
+    </a>
+
+    <a
+    *ngIf="isLoggedIn && user"
+    class="mr20 mr20 size"
+    aria-label="">{{ login.getUser().firstName }} {{ login.getUser().lastName }}
+    </a>
+
+    <a 
+    (click)="logout()"
+    *ngIf="isLoggedIn"
+    mat-icon-button 
+    class="mr20 ml20 size" 
+    aria-label="">Logout
+</a>
+
+  </mat-toolbar>

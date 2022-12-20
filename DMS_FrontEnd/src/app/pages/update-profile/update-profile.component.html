@@ -1,0 +1,86 @@
+
+<div class="bootstrap-wrapper">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-9 offset-md-2">
+                
+                <mat-card>
+                <form *ngIf="profileData" (submit)="updateData()">
+    
+                    <!--email field-->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input
+                        required
+                        [(ngModel)]="profileData.emailId"
+                        name="emailId"
+                        type="email" matInput placeholder="Enter here">
+                        <mat-hint>EmailID must be unique</mat-hint>
+                      </mat-form-field>
+
+                      <!-- firstname field -->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>First Name</mat-label>
+                        <input
+                        required
+                        [(ngModel)]="profileData.firstName"
+                        name="firstName"
+                        type="text" matInput placeholder="Enter here">
+                      </mat-form-field>
+
+                       <!--lastname field-->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Last Name</mat-label>
+                        <input
+                        required
+                        [(ngModel)]="profileData.lastName"
+                        name="lastName"
+                        type="text" matInput placeholder="Enter here">
+                      </mat-form-field>
+
+                       <!--phone-number field-->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Phone Number</mat-label>
+                        <input
+                        required
+                        [(ngModel)]="profileData.contactDetails"
+                        name="contactDetails"
+                        type="number" matInput placeholder="Enter here">
+                      </mat-form-field>
+
+                      <!--address field-->
+                      <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Address</mat-label>
+                        <input
+                        required
+                        [(ngModel)]="profileData.address"
+                        name="address"
+                        type="text" matInput placeholder="Enter here">
+                      </mat-form-field>
+
+                      <!--pincode field-->
+                    <mat-form-field class="full-width" appearance="outline">
+                      <mat-label>Pincode</mat-label>
+                      <input
+                      required
+                      [(ngModel)]="profileData.pincode"
+                        name="pincode"
+                      type="number" matInput placeholder="Enter here">
+                    </mat-form-field>
+
+                      <div class="text-center">
+                        <button type="submit" mat-raised-button color="primary">UPDATE</button>
+                      </div>
+
+                </form>
+            </mat-card>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

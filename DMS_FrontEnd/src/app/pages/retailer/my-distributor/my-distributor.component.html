@@ -1,0 +1,15 @@
+
+
+<mat-card *ngIf="!distributorDetails || !distributorDetails.enable">
+    <mat-card-title>Sorry! No Distributor is Available For Your Pincode</mat-card-title>
+</mat-card>
+<mat-card class="mt20" *ngIf="distributorDetails.enable" >
+    <mat-card-header >
+            <div mat-card-avatar class="user-icon"></div>
+            <mat-card-title>{{ distributorDetails.firstName}} {{ distributorDetails.lastName }}</mat-card-title>
+            <mat-card-subtitle>{{ distributorDetails.emailId }}</mat-card-subtitle>
+   </mat-card-header>
+   <mat-card-content>
+           <p>Mobile Number:  {{ distributorDetails.contactDetails }} | Address:  {{ distributorDetails.address }}, {{ distributorDetails.pincode }}</p>
+   </mat-card-content>
+</mat-card>

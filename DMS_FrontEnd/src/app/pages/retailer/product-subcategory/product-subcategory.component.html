@@ -1,0 +1,54 @@
+<mat-card>
+  <mat-action-list>
+      <div mat-subheader >{{_categoryService.getProduct().productName}}
+      </div>
+      <div class="example-container">
+      
+        <mat-form-field>
+          <mat-label>{{_categoryService.getProduct().productName}} Subcategory</mat-label>
+          <mat-select name="simcategories" >
+            <mat-option *ngFor="let c of categories" [value]="c.categoryId" (click)="categorySelect(c)">
+              {{c.categoryName}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+       <!-- new -->
+        <mat-form-field class="w20">
+          <mat-label>Single unit price</mat-label>
+          <input matInput placeholder="{{_categoryService.getCategory().price}}"
+          [ngModel]="_categoryService.getCategory().price"
+          [readonly]="true">
+        </mat-form-field>
+
+        <button mat-button color="primary" class="ml100" (click)="minusQuantity()">
+          <mat-icon mat-list-icon>remove</mat-icon>
+      </button>
+
+        <mat-form-field class="w20">
+          <input matInput placeholder="{{quantity}}" [readonly]="true">
+        </mat-form-field>
+
+        <button mat-button color="primary" (click)="addQuantity()">
+          <mat-icon mat-list-icon>add</mat-icon>
+      </button>
+
+      <!-- new -->
+      <mat-form-field class="w20">
+        <mat-label>Total Amount</mat-label>
+        <input matInput placeholder="{{_categoryService.getCategory().price * quantity}}" 
+        [ngModel]="_categoryService.getCategory().price * quantity"
+        [readonly]="true">
+      </mat-form-field>
+      
+      </div>
+      <br>
+      <br>
+      <div class="container text-center">
+        
+        <button (click)="place_Order()" mat-raised-button class="ml20 text-center" color="primary" >Place Order</button>
+        
+      </div>
+       
+
+  </mat-action-list>
+  </mat-card>

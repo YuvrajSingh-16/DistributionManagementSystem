@@ -1,0 +1,29 @@
+
+
+<mat-card class="mt20">
+    <mat-card-title>Order Placed By:</mat-card-title>
+    <br>
+    <mat-card-header >
+            <div mat-card-avatar class="user-icon"></div>
+            <mat-card-title>{{ retailerDetails.firstName}} {{ retailerDetails.lastName }}</mat-card-title>
+            <mat-card-subtitle>{{ retailerDetails.emailId }}</mat-card-subtitle>
+   </mat-card-header>
+   <mat-card-content>
+           <p>Mobile Number:  {{ retailerDetails.contactDetails }} | Address:  {{ retailerDetails.address }}, {{ retailerDetails.pincode }}</p>
+   </mat-card-content>
+
+   <mat-card-title class="line">Order Delivered By:</mat-card-title>
+    <br>
+    <mat-card-header>
+            <div mat-card-avatar class="user-icon"></div>
+            <mat-card-title>{{ distributorDetails.firstName}} {{ distributorDetails.lastName }}</mat-card-title>
+            <mat-card-subtitle>{{ distributorDetails.emailId }}</mat-card-subtitle>
+   </mat-card-header>
+   <mat-card-content>
+           <p>Mobile Number:  {{ distributorDetails.contactDetails }} | Address:  {{ distributorDetails.address }}, {{ distributorDetails.pincode }}</p>
+   </mat-card-content>
+</mat-card>
+
+<div class="text-center">
+        <button mat-raised-button color="primary" class="mt20" routerLink="/admin-dashboard/order">Back</button>
+</div>

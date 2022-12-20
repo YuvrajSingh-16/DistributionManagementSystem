@@ -1,0 +1,17 @@
+
+<mat-card class="mt20" *ngFor="let r of retailer">
+    <mat-card-header >
+            <div mat-card-avatar class="user-icon"></div>
+            <mat-card-title>{{ r.firstName}} {{ r.lastName }}</mat-card-title>
+            <mat-card-subtitle>{{ r.emailId }}</mat-card-subtitle>
+   </mat-card-header>
+   <mat-card-content>
+           <p>Mobile Number:  {{ r.contactDetails }} | Address:  {{ r.address }}, {{ r.pincode }}</p>
+   </mat-card-content>
+   <div *ngIf="r.enable"> 
+        <button mat-stroked-button color="warn" (click)="disableRetailer(r.emailId)">Disable Retailer</button>
+    </div>
+    <div *ngIf="!r.enable"> 
+        <button mat-stroked-button color="primary" (click)="enableRetailer(r.emailId)">Enable Retailer</button>
+    </div>
+</mat-card>

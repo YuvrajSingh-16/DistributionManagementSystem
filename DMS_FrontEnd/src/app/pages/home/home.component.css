@@ -1,0 +1,9 @@
+
+.background-image{
+    background-image: url('../../../assets/home_logo.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }

@@ -1,0 +1,12 @@
+
+.full-width{
+    width: 100%;
+}
+
+.background{
+    
+    padding: 20px;
+    border: none;
+    background: rgb(25, 35, 235);
+    background: linear-gradient(90deg, rgb(211, 213, 228) 0%, rgb(202, 206, 230) 100%);
+}

@@ -1,0 +1,49 @@
+<mat-card>
+    <mat-card-title class="text-center">Welcome to Retailer Dashboard</mat-card-title>
+
+<mat-grid-list cols="3" rowHeight="3:2">
+    
+    <mat-grid-tile routerLink="/retailer-dashboard/profile" >
+        <div class="text-center">
+            <img class="icon-size" src="../../../../assets/profile.jpg" alt="">
+            <br>
+            <h1>Profile</h1>
+        </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile routerLink="/retailer-dashboard/view-products">
+        <div class="text-center">
+            <img class="icon-size" src="../../../../assets/product-category.jpg" alt="">
+            <br>
+            <h1>View Products</h1>
+        </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile routerLink="/retailer-dashboard/my-distributor">
+        <div class="text-center">
+            <img class="icon-size" src="../../../../assets/retailer-details.png" alt="">
+            <br>
+            <h1>My Distributor</h1>
+        </div>
+    </mat-grid-tile>
+
+</mat-grid-list>
+</mat-card>
+<mat-grid-list cols="2" rowHeight="4:2">
+    <mat-grid-tile routerLink="/retailer-dashboard/order-history">
+        <div class="text-center">
+            <img class="icon-size" src="../../../../assets/order-history.png" alt="">
+            <br>
+            <h1>Order History</h1>
+        </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile >
+        <div class="text-center" routerLink="/retailer-dashboard/retailer-stock/">
+            <img class="icon-size" src="../../../../assets/stock-details.png" alt="">
+            <br>
+            <h1>Available Stock</h1>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>
+

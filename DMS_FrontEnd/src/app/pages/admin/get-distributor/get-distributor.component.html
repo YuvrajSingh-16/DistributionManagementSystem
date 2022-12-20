@@ -1,0 +1,22 @@
+
+
+<mat-card class="mt20" *ngFor="let d of distributor">
+     <mat-card-header >
+             <div mat-card-avatar class="distributor-icon"></div>
+             <mat-card-title>{{ d.firstName}} {{ d.lastName }}</mat-card-title>
+             <mat-card-subtitle>{{ d.emailId }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+            <p>Mobile Number:  {{ d.contactDetails }} | Address:  {{ d.address }}, {{ d.pincode }}</p>
+    </mat-card-content>
+    <div *ngIf="d.enable"> 
+        <button mat-stroked-button color="warn" (click)="disableDistributor(d.emailId)">Disable Distributor</button>
+    </div>
+    <div *ngIf="!d.enable"> 
+        <button mat-stroked-button color="primary" (click)="enableDistributor(d.emailId)">Enable Distributor</button>
+    </div>
+</mat-card>
+
+<div class="text-center mt15">
+    <button mat-raised-button color="primary" routerLink="/admin-dashboard/add-distributor">Add Distributor</button>
+</div>

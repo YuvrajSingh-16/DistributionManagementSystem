@@ -1,0 +1,47 @@
+<mat-card>
+    <mat-card-title class="text-center">Welcome To Distributor Dashboard</mat-card-title>
+<mat-grid-list cols="3" rowHeight="2:2">
+    
+    <mat-grid-tile routerLink="/distributor-dashboard/profile">
+        <div class="text-center">
+            <img class="icon-size" src="../../../../assets/profile.jpg" alt="">
+            <br>
+            <h1>Profile</h1>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile [routerLink]="'/distributor-dashboard/manage-orders/'+ pincode">
+        <div class="text-center">
+            <img class="icon-size" src="../../../../assets/manage-orders.png" alt="">
+            <br>
+            <h1>Manage Order</h1>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile [routerLink]="'/distributor-dashboard/'+ login.getUser().userId +'/get-retailers/'">
+        <div class="text-center">
+            <img class="icon-size" src="../../../../assets/retailer-details.png" alt="">
+            <br>
+            <h1>Retailer Details</h1>
+        </div>
+    </mat-grid-tile>
+
+</mat-grid-list>
+
+<mat-grid-list cols="2" rowHeight="4:2" class="mt1">
+    
+    <mat-grid-tile >
+        <div class="text-center" [routerLink]="'/distributor-dashboard/stock-details/'+ login.getUser().userId">
+            <img class="icon-size" src="../../../../assets/stock-details.png" alt="">
+            <br>
+            <h1>Stock Details</h1>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile >
+        <div class="text-center" [routerLink]="'/distributor-dashboard/dist-order-history/'+pincode">
+            <img class="icon-size" src="../../../../assets/distributor-order-history.png" alt="">
+            <br>
+            <h1>Order History</h1>
+        </div>
+    </mat-grid-tile>
+
+</mat-grid-list>
+</mat-card>

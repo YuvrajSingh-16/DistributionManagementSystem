@@ -1,0 +1,54 @@
+
+<table mat-table [dataSource]="orders" class="mat-elevation-z8 table">
+   
+  <!-- Order ID -->
+  <ng-container matColumnDef="orderId">
+    <th mat-header-cell *matHeaderCellDef class="mat-column-demo-position"> OrderID </th>
+    <td mat-cell *matCellDef="let element" class="mat-column-demo-position"> {{ element.orderId }} </td>
+  </ng-container>
+
+  <!-- Product Name -->
+  <ng-container matColumnDef="productName">
+    <th mat-header-cell *matHeaderCellDef class="mat-column-demo-name"> Product Name </th>
+    <td mat-cell *matCellDef="let element" class="mat-column-demo-name"> {{element.orderProductCategories[0].productCategories.products.productName}} </td>
+  </ng-container>
+
+  <!-- Category Name -->
+  <ng-container matColumnDef="categoryName">
+    <th mat-header-cell *matHeaderCellDef class="mat-column-demo-name"> Category Name </th>
+    <td mat-cell *matCellDef="let element" class="mat-column-demo-name"> {{element.orderProductCategories[0].productCategories.categoryName}} </td>
+  </ng-container>
+
+  <!-- Price Column -->
+  <ng-container matColumnDef="price">
+    <th mat-header-cell *matHeaderCellDef > Price Per Piece </th>
+    <td mat-cell *matCellDef="let element" > {{element.orderProductCategories[0].productCategories.price}} </td>
+  </ng-container>
+
+  <!-- Quantity Column -->
+  <ng-container matColumnDef="quantity">
+      <th mat-header-cell *matHeaderCellDef > Quantity </th>
+      <td mat-cell *matCellDef="let element" > {{element.quantity}} </td>
+    </ng-container>
+
+    <!-- Total Amount Column -->
+  <ng-container matColumnDef="totalAmount">
+      <th mat-header-cell *matHeaderCellDef > Total Amount </th>
+      <td mat-cell *matCellDef="let element" > {{element.totalAmount}} </td>
+    </ng-container>
+
+    <!-- Order Status Column -->
+  <ng-container matColumnDef="orderStatus">
+      <th mat-header-cell *matHeaderCellDef > Order Status </th>
+      <td mat-cell *matCellDef="let element" > {{element.orderStatus}} </td>
+    </ng-container>
+
+    <!-- Date Column -->
+  <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef class="mat-column-demo-name"> Date </th>
+      <td mat-cell *matCellDef="let element" class="mat-column-demo-name"> {{element.date}} </td>
+    </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

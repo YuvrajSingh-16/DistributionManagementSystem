@@ -1,0 +1,26 @@
+<mat-card class="mt20" *ngFor="let g of getRetailer">
+
+    <mat-card-header >
+
+            <div mat-card-avatar class="distributor-icon"></div>
+
+            <mat-card-title>{{ g.firstName}} {{ g.lastName }}</mat-card-title>
+
+            <!-- <mat-slide-toggle color="primary">Active/Deactive</mat-slide-toggle> -->
+
+            <mat-card-subtitle>{{ g.emailId }}</mat-card-subtitle>
+
+        
+            
+
+   </mat-card-header>
+
+   <mat-card-content>
+
+           <p>Mobile Number:  {{ g.contactDetails }} | Address:  {{ g.address }}, {{ g.pincode }}</p>
+
+          
+
+   </mat-card-content>
+
+</mat-card>
